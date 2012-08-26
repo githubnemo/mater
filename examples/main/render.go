@@ -1,7 +1,7 @@
 package main
 
 import (
-	"github.com/banthar/Go-OpenGL/gl"
+	"github.com/banthar/gl"
 	"github.com/teomat/ftgl-go"
 	"github.com/teomat/mater/vect"
 	"log"

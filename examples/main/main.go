@@ -3,7 +3,7 @@ package main
 import (
 	"flag"
 	"fmt"
-	"github.com/banthar/Go-OpenGL/gl"
+	"github.com/banthar/gl"
 	"github.com/jteeuwen/glfw"
 	"github.com/teomat/mater/collision"
 	"log"
