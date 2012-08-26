@@ -2,22 +2,21 @@ package main
 
 import (
 	"github.com/banthar/gl"
-	"github.com/teomat/ftgl-go"
+	"github.com/juturnas/go-ftgl"
 	"github.com/teomat/mater/vect"
 	"log"
 	"math"
 )
 
-var Font *ftgl.Font
+var Font ftgl.Font
 
 func init() {
 	var err error
-	Font, err = ftgl.CreatePixmapFont("fonts/ttf-bitstream-vera-1.10/VeraMono.ttf")
+	Font, err = ftgl.NewPixmapFont("fonts/ttf-bitstream-vera-1.10/VeraMono.ttf", 20)
 	if err != nil {
 		log.Printf("Error loading main font:, %v", err)
 		panic(err)
 	}
-	Font.SetFontFaceSize(20, 20)
 }
 
 func RenderFontAt(text string, x, y float64) {
@@ -25,7 +24,7 @@ func RenderFontAt(text string, x, y float64) {
 
 	gl.RasterPos2d(x, y)
 
-	Font.RenderFont(text, ftgl.RENDER_ALL)
+	Font.Render(text)
 
 	gl.PopMatrix()
 }
